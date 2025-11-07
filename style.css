@@ -1,0 +1,103 @@
+/* style.css */
+
+/* Reseta margens e define a fonte padrão */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4; /* Cor de fundo leve */
+}
+
+/* --- Barra de Navegação (as "abas") --- */
+nav {
+  background-color: #333; /* Cor de fundo escura para a barra */
+  overflow: hidden;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none; /* Remove os pontos da lista */
+  display: flex; /* Coloca os itens lado a lado */
+  justify-content: center; /* Centraliza os links */
+}
+
+nav li a {
+  display: block; /* Faz o link ocupar todo o espaço do 'li' */
+  color: white;
+  text-align: center;
+  padding: 14px 16px; /* Espaçamento interno */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+nav li a:hover {
+  background-color: #555;
+}
+
+/* Estilo para a aba "ativa" (opcional, mas recomendado) */
+.active {
+  background-color: #007bff; /* Uma cor de destaque */
+}
+
+
+/* --- Seção Hero (Imagem Principal com Overlay) --- */
+.hero-section {
+  position: relative;
+  background-image: url('img/Inicio.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  height: 70vh; /* 70% da altura da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  color: white;
+}
+
+/* Overlay azul transparente sobre a imagem */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(52, 152, 219, 0.7), rgba(142, 68, 173, 0.7));
+  z-index: 1;
+}
+
+/* Garante que o texto fique acima do overlay */
+.hero-section h1,
+.hero-section p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 4rem; /* Tamanho grande para o título */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.5rem; /* Tamanho para o subtítulo */
+  font-weight: 300;
+}
+
+
+/* --- Área de Conteúdo --- */
+.content {
+  max-width: 900px;
+  margin: 20px auto; /* Centraliza o conteúdo */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
