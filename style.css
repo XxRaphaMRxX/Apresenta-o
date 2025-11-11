@@ -96,7 +96,7 @@ nav {
   background-color: #555;
 }
 
-.menu-toggle::before {
+.menu-toggle:empty::before {
   content: '☰ Menu';
 }
 
@@ -112,7 +112,7 @@ nav ul {
 
 nav li {
   margin: 0;
-  opacity: 0;
+  opacity: 1;
   animation: slideUp 0.5s ease-out forwards;
 }
 
@@ -357,13 +357,15 @@ nav li a:hover {
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.4s ease-out;
     order: 3;
+    opacity: 1;
   }
   
-  /* Quando o menu está aberto (você pode adicionar JS para toggle) */
+  /* Quando o menu está aberto */
   nav ul.active {
-    max-height: 500px;
+    max-height: 600px !important;
+    overflow: visible;
   }
   
   nav li {

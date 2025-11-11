@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Projeto - Início</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Garantir que o menu funcione em mobile */
+    @media screen and (max-width: 600px) {
+      nav ul.active {
+        display: flex !important;
+        flex-direction: column !important;
+        max-height: 1000px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
