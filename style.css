@@ -1292,3 +1292,109 @@ section:last-child {
     padding: 20px;
   }
 }
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  clear: both;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-group {
+  margin-bottom: 25px;
+}
+
+.footer-group h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ecf0f1;
+  font-weight: 600;
+}
+
+.footer-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-member {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-member:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer-institutions {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-institution {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #bdc3c7;
+}
+
+.footer-institution strong {
+  color: #ecf0f1;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
+
+/* Responsividade do rodapé */
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 30px 15px 15px;
+  }
+  
+  .footer-group h3 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-members {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-member {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+  
+  .footer-institution {
+    font-size: 0.9rem;
+  }
+}
